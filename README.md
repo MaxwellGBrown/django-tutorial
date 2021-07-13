@@ -1,5 +1,7 @@
 # django-example
 
+This repo is built from the [Django: Getting Started Tutorial](https://docs.djangoproject.com/en/3.2/intro/tutorial01/)
+
 ## quickstart
 
 ```
