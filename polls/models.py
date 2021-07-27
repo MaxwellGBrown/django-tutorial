@@ -1,5 +1,6 @@
 import datetime
 
+from django.contrib import admin
 from django.db import models
 from django.utils import timezone
 
@@ -13,6 +14,11 @@ class Question(models.Model):
         """Return str representation."""
         return self.question_text
 
+    @admin.display(
+        boolean=True,
+        ordering="pub_date",
+        description="Published recently?"
+    )
     def was_published_recently(self):
         """Returns True if publish date is within a day."""
         now = timezone.now()
